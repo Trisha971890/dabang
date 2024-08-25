@@ -6,7 +6,7 @@ app.use(express.json()); // Middleware to parse JSON request bodies
 
 app.post('/submit', async (req, res) => {
   try {
-
+    console.log(req)
     const newUser = new User({
       name: req.body.name,
       email: req.body.email,
@@ -14,7 +14,7 @@ app.post('/submit', async (req, res) => {
     });
 
   
-    // Save the user to the database
+    Save the user to the database
     await newUser.save();
     console.log(res,"res")
     res.status(201).send('User saved successfully');
