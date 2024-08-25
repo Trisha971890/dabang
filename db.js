@@ -1,7 +1,5 @@
 const mongoose = require('mongoose');
 
-
-
 mongoose.connect('mongodb://localhost:27017/my_database', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -10,3 +8,4 @@ mongoose.connect('mongodb://localhost:27017/my_database', {
 }).catch(err => {
   console.error('Failed to connect to MongoDB', err);
 });
+module.exports=mongoose
